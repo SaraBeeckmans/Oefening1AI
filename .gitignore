@@ -1,0 +1,17 @@
+.idea/
+/env
+/odoo
+*.pyc
+*.log
+*.mp3
+*.bak
+workspace.xml
+misc.xml
+modules.xml
+orgelradio-website.iml
+vcs.xml
+peterbeeckmans.xml
+profiles_settings.xml
+Project_Default.xml
+
+

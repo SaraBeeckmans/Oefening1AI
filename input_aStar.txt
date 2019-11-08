@@ -1,0 +1,11 @@
+Antwerpen
+Parijs
+Antwerpen 300: Rotterdam 8 Hasselt 10 Brussel 7 Gent 9 
+Rotterdam 372: Antwerpen 8 
+Hasselt 315: Antwerpen 10 
+Brussel 264: Antwerpen 7 Charleroi 6 Gent 10 
+Charleroi 229: Brussel 6 
+Gent 263: Antwerpen 9 Brussel 10 DePanne 12 Kortrijk 5 
+DePanne 250: Gent 12
+Kortrijk 229: Gent 5 Parijs 10
+Parijs 0: Kortrijk 10
