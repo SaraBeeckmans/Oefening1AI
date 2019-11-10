@@ -50,6 +50,7 @@ def search_path(start_node=None, goal_node=None):
         seen[node.name] = cost
 
     # TODO paths_to_goal -> sort on score. Return only lowest path
+    
     return paths_to_goal
 
 
@@ -103,6 +104,8 @@ def main():
     paths = search_path(start_node, goal_node)
     # TODO: Print path as stated in exercise
     print(paths)
+    for node in paths:
+        print(node.name)
 
 
 if __name__ == '__main__':
