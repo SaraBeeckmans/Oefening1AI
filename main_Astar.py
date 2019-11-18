@@ -34,6 +34,9 @@ def search_path(start_node=None, goal_node=None):
         # Pop the cost, node, path from the queue
         cost, path_cost, node, path = heapq.heappop(queue)
 
+        # We need to make a copy of the list, otherwise there is only one reference to path.
+        path = path.copy()
+
         if node.name in seen and seen[node.name] < cost:
             continue  # returns control to beginning of while loop
 
@@ -41,7 +44,7 @@ def search_path(start_node=None, goal_node=None):
 
         if node == goal_node:
             paths_to_goal[cost] = path
-            continue  # returns control to beginning of while loop
+            return path
 
         for edge in node.edges:
             if edge.target_node != node:    # Reference to parent are ignored.
@@ -52,7 +55,6 @@ def search_path(start_node=None, goal_node=None):
 
         seen[node.name] = cost
 
-    # TODO: paths_to_goal -> sort on score. Return only lowest path
     return paths_to_goal
 
 
@@ -105,9 +107,10 @@ def main():
     start_node = all_nodes[start_ln]
     goal_node = all_nodes[goal_ln.rstrip('\n')]
 
-    paths = search_path(start_node, goal_node)
-    # TODO: Print path as stated in exercise
-    print(paths)
+    path = search_path(start_node, goal_node)
+    # print(paths)
+    for node in path:
+        print(node.name)
 
 
 if __name__ == '__main__':
